@@ -1,0 +1,35 @@
+[project]
+name = "app"
+version = "1"
+dynamic = ["dependencies"]
+requires-python = ">=3.13"
+
+[tool.setuptools.dynamic.dependencies]
+file = "requirements.txt"
+
+[project.optional-dependencies]
+tests = ["pytest", "pytest-asyncio"]
+lint = ["ruff"]
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "if TYPE_CHECKING:"
+]
+
+[tool.ruff]
+line-length = 120
+src = ["app"]
+
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
+
+[tool.ruff.lint]
+isort.combine-as-imports = true
+pydocstyle.convention = "numpy"

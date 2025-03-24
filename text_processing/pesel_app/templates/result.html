@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Walidacja PESEL</title>
+</head>
+<body>
+    <h1>Wynik Walidacji PESELu</h1>
+    {% if is_valid %}
+        <p>Numer: {{ pesel }}.</p>
+        <p>Data urodzenia: {{ birth_date }}</p>
+        <p>Płeć: {{ gender }}</p>
+    {% else %}
+        <p>Numer PESEL {{ pesel }} jest niepoprawny.</p>
+    {% endif %}
+    <a href="{% url 'index' %}">Back to home</a>
+</body>
+</html>

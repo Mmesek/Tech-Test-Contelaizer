@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Walidator PESEL</title>
+</head>
+<body>
+    <h1>Walidator PESEL</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="pesel">PESEL:</label>
+        <input type="text" id="pesel" name="pesel" required>
+        <button type="submit">Sprawdź</button>
+    </form>
+</body>
+</html>

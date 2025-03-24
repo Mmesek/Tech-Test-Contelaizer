@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 1</title>
+</head>
+<body>
+    <h1>Zadanie 1</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" id="file" name="file" required>
+        <button type="submit">Wyślij</button>
+    </form>
+</body>
+</html>
